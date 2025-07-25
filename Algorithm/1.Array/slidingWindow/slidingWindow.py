@@ -29,14 +29,23 @@ def dynamicSlidingWindow(string):
     char_set = set()
     left = 0
     max_len = 0
+    start = 0
 
     for right in range(len(string)):
         while string[right] in char_set:
-            char_set.remove(s[left])
+            char_set.remove(string[left])
             left += 1
-        char_set.add(s[right])
+        char_set.add(string[right])
+
+        if right - left + 1 > max_len:
+            start = left 
+            
         max_len = max(max_len, right - left + 1)
-    print(f""" {string} , {max_len} """)
+
+        
+    subString = string[start:start + max_len]
+
+    print(f""" {string} , {max_len}, {subString}""")
     return max_len
 
 
@@ -45,3 +54,5 @@ if __name__ == '__main__':
     slidingWindow([1, 4, 2, 10, 2, 3, 1, 0, 20], 4)
     
     dynamicSlidingWindow("abcabcbb")
+    dynamicSlidingWindow("abcabbbazybcsxdebbb")
+    dynamicSlidingWindow("abcabdecbb")
