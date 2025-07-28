@@ -24,3 +24,4 @@ stack.pop()
 
 print(stack)
 print(peek(stack))
+
