@@ -3,7 +3,6 @@ class node():
     self.data = data
     self.prev = None
     self.next = None
-  pass
 
 head = None
 tail = None
