@@ -20,6 +20,9 @@ if __name__ == '__main__':
 
   # Pre Order: 
   # 1 2 4 5 3 6 
+  
+  #Level Order: 
+  #[[1], [2, 3], [4, 5, 6]]
 
   root = binaryTree.node(1)
   root.left = binaryTree.node(2)
