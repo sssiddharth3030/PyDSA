@@ -23,7 +23,7 @@
 # if right is low or equal , set left pointer to same position as right
 def maxProfit(self, prices):
     left , right = 0 , 1
-    maxProfit, sumProfit = 0, 0
+    maxProfit = 0
 
     while (right < len(prices)):
         if prices[right] > prices[left]:
