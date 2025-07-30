@@ -31,3 +31,27 @@ def preOrder(root):
   preOrder(root.left)
   preOrder(root.right)
   
+def levelOrderNodes(root, level, res):
+  # Base case: If node is null, return
+  if root is None:
+    return
+  
+  # Add a new level to the result if needed
+  if len(res) <= level:
+    res.append([])
+  
+  # Add current node's data to its corresponding level
+  res[level].append(root.data)
+  
+  # Recur for left and right children
+  levelOrderNodes(root.left, level+1, res)
+  levelOrderNodes(root.right, level+1, res)
+
+def levelOrder(root): #refer gfg
+  #stores result level by level 
+  res = []
+  levelOrderNodes(root, 0, res)
+  
+  print(res)
+  return res
+  

@@ -37,3 +37,7 @@ if __name__ == '__main__':
   print('Pre Order: ')
   binaryTree.preOrder(root) # root -> left -> right #for cloning
   print('\n')
+  
+  print('Level Order: ')
+  binaryTree.levelOrder(root) # travels left to right , for each level #used for heaps
+  print('\n')
