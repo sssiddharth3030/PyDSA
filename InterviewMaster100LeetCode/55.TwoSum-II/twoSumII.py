@@ -13,7 +13,7 @@
 
 def twoSum(self, numbers, target):
     # set one pointer at start & one at end of list
-    # if the sum of the low & high equals, return indices
+    # if the sum of the low & high equals, return indices + 1
     
     # if the sum is less than target, increment low by 1
     # if the sum is greater than target , decrement high by 1
