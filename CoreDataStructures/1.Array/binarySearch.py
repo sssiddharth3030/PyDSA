@@ -4,17 +4,17 @@ import math
 def binarySearch(arr, target):
     left , right = 0, len(arr) - 1
 
-    while(left < right):
-        mid = math.ceil( left + ((right - left)/2 ) )
+    while(left <= right):
+        mid = left + ((right - left)//2 )
 
         # print(arr[left], arr[mid], arr[right])
 
         if arr[mid] == target:
             return mid
-        elif arr[right] == target:
-            return right
-        elif arr[left] == target:
-            return left
+        # elif arr[right] == target:
+        #     return right
+        # elif arr[left] == target:
+        #     return left
         elif arr[mid] > target:
             right = mid - 1
         elif arr[mid] < target:
