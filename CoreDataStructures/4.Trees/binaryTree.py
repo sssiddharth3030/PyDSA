@@ -22,7 +22,7 @@ def postOrder(root):
   postOrder(root.right)
   print(root.data, end=" ")
   
-def preOrder(root):
+def preOrder(root): 
   # root -> left -> right
   # is used to copy a tree from root to leaf
   if root is None:
@@ -30,8 +30,9 @@ def preOrder(root):
   print(root.data, end=" ")
   preOrder(root.left)
   preOrder(root.right)
-  
-def levelOrderNodes(root, level, res):
+
+#Breadth First Search
+def levelOrderNodes(root, level, res): 
   # Base case: If node is null, return
   if root is None:
     return
