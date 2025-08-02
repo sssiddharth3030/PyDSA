@@ -15,8 +15,9 @@ class Solution:
     """
     Do not return anything, modify s in-place instead.
     """
+    # set two pointers , one at start & one at end
     low, high = 0, len(s) - 1
-
+    # swap the elements , until high pointer is greater low
     while(low <= high):
       s[low], s[high] = s[high], s[low]
       low += 1
