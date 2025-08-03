@@ -10,21 +10,29 @@ class TreeNode:
         self.val = val
         self.left = left
         self.right = right
-        
+
+# S - recursion to construct the tree        
 class Solution:
   def __init__(self):
     pass
   # def sortedArrayToBST(self, nums: List[int]) -> Optional[TreeNode]:
   def sortedArrayToBST(self, nums):
     def helper(l, r):
+      # base case
       if l > r:
         return None
+      
+      # we are starting at mid , since sorted array
 
       m = l + ((r - l)//2 )
+      # create node for the value
       root = TreeNode(nums[m])
+      # create left tree
       root.left= helper(l, m-1)
+      # create right tree
       root.right = helper(m+1, r)
 
+      # return root
       return root
 
     return helper(0, len(nums) - 1)
